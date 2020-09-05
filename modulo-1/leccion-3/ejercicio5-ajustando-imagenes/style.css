@@ -5,6 +5,7 @@
     padding: 10px;
     margin: 5px; /*El margen sólo se añade a los lados*/
     box-sizing: border-box; /*el padding y el margen se incluyen en el alto y en el ancho*/
+    margin: auto;
 }
 
 .gatito {
