@@ -1,8 +1,10 @@
 table {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
     text-align: center;
 }
 
-td, th {
+td,
+th {
     border: 1px solid green;
 }
