@@ -2,14 +2,17 @@
     width: 100px;
     height: 100px;
     background-color: chocolate;
+    display: inline-block;
 }
 .display2 {
     width: 100px;
     height: 100px;
     background-color: purple;
+    display: inline-block;
 }
 .display3 {
     width: 100px;
     height: 100px;
     background-color: green;
+    display: inline-block;
 }
