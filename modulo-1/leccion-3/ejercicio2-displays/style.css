@@ -1,18 +1,22 @@
+:root {
+    --display: inline-block;
+}
+
 .display1 {
     width: 100px;
     height: 100px;
     background-color: chocolate;
-    display: inline-block;
+    display: var(--display);
 }
 .display2 {
     width: 100px;
     height: 100px;
     background-color: purple;
-    display: inline-block;
+    display: var(--display);
 }
 .display3 {
     width: 100px;
     height: 100px;
     background-color: green;
-    display: inline-block;
+    display: var(--display);
 }
