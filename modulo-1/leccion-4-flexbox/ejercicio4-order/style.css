@@ -14,3 +14,11 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.second {
+    order: 1;
+}
+
+.five {
+    order: 0; /*al tener menor order, pesa menos y se situa arriba*/
+}
