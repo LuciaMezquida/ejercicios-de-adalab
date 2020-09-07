@@ -18,3 +18,8 @@
     flex-basis: 5%;
     text-align: center;
 }
+
+.main {
+    background-color: gray;
+    padding: 20px;
+    flex-basis: 90%;
