@@ -17,6 +17,7 @@
     background-color: rgb(170, 168, 168);
     flex-basis: 5%;
     text-align: center;
+    padding: 20px;
 }
 
 .main {
@@ -27,7 +28,7 @@
 
 .footer {
     background-color: orange;
-    padding: 0 20px 0 20px;
+    padding: 20px;
     flex-basis: 5%;
     text-align: center;
 }
