@@ -23,3 +23,11 @@
     background-color: gray;
     padding: 20px;
     flex-basis: 90%;
+}
+
+.footer {
+    background-color: orange;
+    padding: 0 20px 0 20px;
+    flex-basis: 5%;
+    text-align: center;
+}
