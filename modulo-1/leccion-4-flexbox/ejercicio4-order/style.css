@@ -8,4 +8,8 @@
     border: 1px solid black;
     width: 500px;
     height: 1000px;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
 }
