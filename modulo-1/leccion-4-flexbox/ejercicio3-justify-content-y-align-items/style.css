@@ -3,3 +3,8 @@
     margin: 0;
     padding: 0;
 }
+
+.nav-bar {
+    border: 1px solid orange;
+    height: 100px;
+}
