@@ -2,9 +2,13 @@
     width: 500px;
     height: 500px;
     border: 1px solid black;
+    display: flex; /*se ponen una al lado de la otra por defecto*/
+    flex-direction: column; /*se ponen una debajo de la otra*/
+    margin: auto;
 }
 
 .item {
     background-color: mediumaquamarine;
     border: 1px solid orangered;
+    padding: 5px;
 }
