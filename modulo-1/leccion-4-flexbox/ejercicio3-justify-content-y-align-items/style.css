@@ -4,12 +4,16 @@
     padding: 0;
 }
 
-.nav-bar {
+.nav {
     border: 1px solid orange;
+}
+
+.nav-bar {
     height: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 20px 0 20px;
 }
 
 .nav-bar {
