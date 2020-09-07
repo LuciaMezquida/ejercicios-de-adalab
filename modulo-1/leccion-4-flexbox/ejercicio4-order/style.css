@@ -22,3 +22,7 @@
 .five {
     order: 0; /*al tener menor order, pesa menos y se situa arriba*/
 }
+
+.five img {
+    margin-left: 130px;
+}
