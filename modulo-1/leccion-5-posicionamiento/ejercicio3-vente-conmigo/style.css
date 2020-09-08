@@ -24,3 +24,7 @@
     top: 100px;
     text-align: justify;
 }
+
+.main p {
+    padding-bottom: 20px;
+}
