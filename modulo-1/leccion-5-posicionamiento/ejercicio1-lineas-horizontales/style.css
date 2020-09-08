@@ -4,5 +4,7 @@
     align-items: center;
 }
 
-.nav {
+.item {
+    display: inline-block;
+    padding-left: 12px;
 }
