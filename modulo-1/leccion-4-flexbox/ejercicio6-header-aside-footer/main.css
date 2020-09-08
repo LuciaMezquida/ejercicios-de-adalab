@@ -17,3 +17,8 @@
 .section {
     display: flex;
 }
+
+.aside1 {
+    background-color: yellow;
+    text-align: center;
+}
