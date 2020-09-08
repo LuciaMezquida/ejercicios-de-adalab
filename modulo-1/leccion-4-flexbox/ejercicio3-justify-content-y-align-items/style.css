@@ -1,19 +1,16 @@
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 1px;
     padding: 0;
 }
 
-.nav {
-    border: 1px solid orange;
-}
-
 .nav-bar {
+    border: 1px solid orange;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 20px 0 20px;
+    padding: 0 20px 0 20px;
 }
 
 .nav-bar {
