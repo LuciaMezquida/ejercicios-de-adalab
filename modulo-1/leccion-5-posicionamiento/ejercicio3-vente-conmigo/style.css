@@ -16,9 +16,11 @@
     font-size: 40px;
     position: fixed;
     width: 600px;
+    z-index: 1;
 }
 
 .main {
     position: relative;
     top: 100px;
+    text-align: justify;
 }
