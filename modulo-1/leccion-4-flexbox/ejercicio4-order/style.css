@@ -17,10 +17,12 @@
 
 .second {
     order: 1;
+    width: 50%;
 }
 
 .five {
     order: 0; /*al tener menor order, pesa menos y se situa arriba*/
+    width: 100%;
 }
 
 .five img {
