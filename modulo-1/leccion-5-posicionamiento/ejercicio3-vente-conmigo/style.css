@@ -17,3 +17,8 @@
     position: fixed;
     width: 600px;
 }
+
+.main {
+    position: relative;
+    top: 100px;
+}
