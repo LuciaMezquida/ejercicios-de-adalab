@@ -2,3 +2,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.cookies {
+    height: 100px;
+    background-color: yellow;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+}
