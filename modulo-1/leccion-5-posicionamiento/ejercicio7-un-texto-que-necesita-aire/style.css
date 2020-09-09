@@ -1,4 +1,6 @@
 .text {
     max-width: 600px;
     width: 86%;
+    text-align: justify;
+    margin: auto;
 }
