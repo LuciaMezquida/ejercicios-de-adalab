@@ -1,3 +1,3 @@
 .photo {
-    background-image: url(/rutas-relativas/images/mi-foto.jpg); /*ruta absoluta*/
-}
+    background-image: url(../images/foto.jpg); /*ruta relativa*/
+
