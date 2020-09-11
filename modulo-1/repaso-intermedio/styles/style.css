@@ -13,7 +13,6 @@ body {
     color: #cc212a;
     font-weight: 900;
     font-size: 25px;
-    text-align: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
