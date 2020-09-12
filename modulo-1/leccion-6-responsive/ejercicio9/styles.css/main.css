@@ -34,7 +34,7 @@ h1 {
     .nav {
         margin-right: 20px;
         flex-basis: 30%;
-        height: 60px;
+        height: fit-content;
     }
     .main-footer {
         flex-basis: 70%;
@@ -53,5 +53,14 @@ h1 {
     }
     .p-square p {
         flex-basis: 50%;
+    }
+}
+@media all and (min-width: 1000px) {
+    .main-footer {
+        display: flex;
+    }
+    .footer {
+        margin-left: 20px;
+        height: fit-content;
     }
 }
