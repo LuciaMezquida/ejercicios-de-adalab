@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    border: 8px solid black;
+}
+.contain {
+    margin: 108px;
+}
+.contain h4 {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.contain h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+.contain p {
+    font-size: 18px;
+    margin-bottom: 27px;
+}
+.contain a {
+    padding: 8px 16px;
+    margin-bottom: 32px;
+    margin-left: -16px;
+}
