@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+}
+h1 {
+    padding-bottom: 20px;
+}
+.nav {
+    background-color: lime;
+}
+.main {
+    background-color: yellow;
+}
+.main h2 {
+    padding-bottom: 20px;
+}
+.footer {
+    background-color: gray;
+    margin: 20px 0;
+}
+.footer h3 {
+    padding-bottom: 20px;
+}
