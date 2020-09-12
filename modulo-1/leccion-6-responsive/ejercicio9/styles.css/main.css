@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
 }
 
 body {
@@ -24,4 +25,33 @@ h1 {
 }
 .footer h3 {
     padding-bottom: 20px;
+}
+
+@media all and (min-width: 480px) {
+    .container {
+        display: flex;
+    }
+    .nav {
+        margin-right: 20px;
+        flex-basis: 30%;
+        height: 60px;
+    }
+    .main-footer {
+        flex-basis: 70%;
+    }
+    .footer {
+        margin: 0;
+    }
+    .square {
+        width: 160px;
+        height: 160px;
+        background-color: orange;
+        flex-basis: 50%;
+    }
+    .p-square {
+        display: flex;
+    }
+    .p-square p {
+        flex-basis: 50%;
+    }
 }
