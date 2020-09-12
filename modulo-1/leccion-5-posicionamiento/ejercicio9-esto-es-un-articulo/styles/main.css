@@ -22,8 +22,29 @@ body {
     font-size: 18px;
     margin-bottom: 27px;
 }
-.contain a {
+.link {
     padding: 8px 16px;
     margin-bottom: 32px;
     margin-left: -16px;
+    cursor: help;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid black;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
