@@ -1,0 +1,85 @@
+/*reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: var(--blue);
+}
+
+/*css variables*/
+:root {
+    --gray: #4a4a4a;
+    --blue: #3cdbc0;
+    --white: #ffffff;
+}
+
+/*Header*/
+.header {
+    text-align: center;
+    padding-bottom: 13px;
+    position: absolute;
+    width: 100vw;
+    background-color: var(--white);
+}
+.logo {
+    width: 155px;
+    margin: auto;
+    padding: 10px 0;
+}
+.nav-bar {
+    display: flex;
+    justify-content: center;
+}
+.nav-bar li {
+    list-style: none;
+}
+.link1,
+.link2 {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 16px;
+}
+.link1 {
+    padding-right: 20px;
+}
+
+/*Header. Media queries para tablet*/
+@media all and (min-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+    .logo {
+        margin: 0;
+        padding: 20px 0 20px 30px;
+    }
+    .link2 {
+        padding-right: 30px;
+    }
+}
+
+/*Main*/
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    font-size: 30px;
+    color: var(--white);
+    text-align: center;
+}
+
+/*Main. Media queries para tablet*/
+@media all and (min-width: 768px) {
+    .text {
+        font-size: 40px;
+    }
+}
