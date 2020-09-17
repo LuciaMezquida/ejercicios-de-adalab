@@ -1,0 +1,11 @@
+input,
+label {
+  display: block;
+}
+.fullName,
+.birthDate {
+  display: flex;
+}
+#usName {
+  text-align: end;
+}
