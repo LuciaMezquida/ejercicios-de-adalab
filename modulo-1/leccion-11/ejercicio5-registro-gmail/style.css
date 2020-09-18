@@ -3,7 +3,8 @@ label {
   display: block;
 }
 .fullName,
-.birthDate {
+.birthDate,
+.telNumber {
   display: flex;
 }
 #usName {

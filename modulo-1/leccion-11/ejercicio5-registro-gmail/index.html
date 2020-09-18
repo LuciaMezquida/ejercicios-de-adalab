@@ -25,9 +25,15 @@
       <label for="confirmPassword">Confirma tu contraseña</label>
       <input type="password" id="confirmPassword" name="confirmPassword" />
       <label for="birthDate">Fecha de nacimiento</label>
-      <div class="birthDate">
-        <input type="number" id="birthDate" name="day" placeholder="Día" />
+      <div class="dia">
+        <select id="dia" name="dia">
+          <option value="" disabled selected>Día</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
         <select id="birthDate" name="month">
+          <option value="" disabled selected>Mes</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -41,20 +47,32 @@
           <option value="11">11</option>
           <option value="12">12</option>
         </select>
-        <input type="number" id="birthDate" name="year" placeholder="Año" />
+        <select id="year" name="year">
+          <option value="" disabled selected>Year</option>
+          <option value="1982">1982</option>
+          <option value="1983">1983</option>
+          <option value="1984">1984</option>
+        </select>
       </div>
       <label for="sex">Sexo</label>
       <select id="sex" name="sex">
+        <option value="" disabled selected>Selecciona tu género</option>
         <option value="Mujer">Mujer</option>
         <option value="Hombre">Hombre</option>
       </select>
       <label for="telephone">Teléfono móvil</label>
-      <input type="number" id="telephone" name="telephone" placeholder="+34" />
+      <div class="telNumber">
+        <select id="plase" name="plase">
+          <option value="spain">🇪🇸</option>
+          <option value="U.S.A">🇺🇸</option>
+        </select>
+        <input type="tel" id="telephone" name="telephone" value="+34" />
+      </div>
       <label for="email">Tu dirección de correo electrónico actual</label>
       <input type="email" id="email" name="email" />
       <label for="place">Ubicación</label>
       <select id="plase" name="plase">
-        <option value="spain">España</option>
+        <option value="spain">🇪🇸España</option>
         <option value="portugal">Portugal</option>
       </select>
       <input type="submit" value="Siguiente paso" />
