@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: repeat(3, 33vh);
+  grid-template-areas: "header header" "main aside" "footer footer";
+  grid-gap: 4px;
+}
+.item {
+  background-color: aquamarine;
+}
+.header {
+  grid-area: header;
+}
+.footer {
+  grid-area: footer;
+}
