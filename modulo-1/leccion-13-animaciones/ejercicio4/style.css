@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/caravana.jpeg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(54, 186, 190);
+  font-size: 90px;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.75);
+  animation: textDown 5s ease-out infinite;
+}
+
+@keyframes textDown {
+  0% {
+    transform: translate(0, -550px);
+  }
+  50% {
+    transform: translate(0);
+    transform: scale(1.5);
+  }
+  100% {
+    transform: translate(0, -550px);
+  }
+}
