@@ -7,3 +7,4 @@ let adalaber = document.querySelector(".partner1");
 console.log(adalaber);
 
 title.innerHTML = title.innerHTML + " " + adalaber.innerHTML;
+console.log(adalaber.innerHTML);
