@@ -8,3 +8,6 @@ userAvatar = "";
 
 const avatarImg = document.querySelector(".user__avatar");
 avatarImg.setAttribute("src", userAvatar || DEFAULT_AVATAR);
+
+// const avatarImg = document.querySelector(".user");
+// avatarImg.innerHTML = `<h1>Bill</h1><img src=${userAvatar}>`;
