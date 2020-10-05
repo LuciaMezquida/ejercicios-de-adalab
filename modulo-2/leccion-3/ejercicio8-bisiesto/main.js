@@ -5,7 +5,7 @@
 // const year = parseInt(yearValue.value);
 // console.log(year);
 
-const year = 1982;
+const year = 2020;
 
 if (year % 4 === 0) {
   console.log(year + " es un año bisiesto");
