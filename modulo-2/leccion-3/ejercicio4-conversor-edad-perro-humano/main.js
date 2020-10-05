@@ -10,3 +10,10 @@ if (age === 1) {
 } else {
   console.log("Su perro tiene " + age * 5 + " años");
 }
+
+const day;
+if (day % 2 === 0) {
+  console.log('me tocan los niños');
+} else if (day % 2 !== 0){
+  
+}
