@@ -2,7 +2,7 @@
 
 const text = document.querySelector(".container");
 
-window.addEventListener("scroll", function () {
+function changeColor() {
   let scrollPixel = window.scrollY;
   if (scrollPixel < 250) {
     text.classList.add("blue");
@@ -11,4 +11,6 @@ window.addEventListener("scroll", function () {
     text.classList.add("yellow");
     text.classList.remove("blue");
   }
-});
+}
+
+window.addEventListener("scroll", changeColor);
