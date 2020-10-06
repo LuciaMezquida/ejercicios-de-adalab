@@ -1,19 +1,21 @@
 "use strict";
 //selecciono el campo del input
-const newAge = prompt("Escribe la edad de tu perro");
-let age = parseInt(newAge);
 
-if (age === 1) {
-  console.log("Su perro tiene 15 años");
-} else if (age === 2) {
-  console.log("Su perro tiene 24 años");
-} else {
-  console.log("Su perro tiene " + age * 5 + " años");
+function getDogYear(age) {
+  if (age === 1) {
+    return "Su perro tiene 15 años";
+  } else if (age === 2) {
+    return "Su perro tiene 24 años";
+  } else {
+    return "Su perro tiene " + age * 5 + " años";
+  }
 }
+const newAge = document.querySelector(".dogYear");
+console.log(newAge);
+let age = newAge.value;
+console.log(age);
+age = parseInt(age);
+console.log(age);
 
-const day;
-if (day % 2 === 0) {
-  console.log('me tocan los niños');
-} else if (day % 2 !== 0){
-  
-}
+const text = document.querySelector(".text");
+text.innerHTML = getDogYear(age);
