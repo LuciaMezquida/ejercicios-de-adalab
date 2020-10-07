@@ -13,5 +13,5 @@ const adalaber2 = {
   age: 25,
   job: "actriz",
 };
-const text = document.querySelector(".text");
-text.innerHTML = `Mi nombre es ${adalaber1.name}, tengo ${adalaber1.age} años y soy ${adalaber1.job}`;
+const text1 = document.querySelector(".text1");
+text1.innerHTML = `Mi nombre es ${adalaber2.name}, tengo ${adalaber2.age} años y soy ${adalaber2.job}`;
