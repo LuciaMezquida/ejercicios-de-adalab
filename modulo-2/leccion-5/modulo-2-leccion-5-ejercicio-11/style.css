@@ -1,0 +1,14 @@
+.header {
+  background-color: antiquewhite;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+.main {
+  margin-top: 100px;
+}
