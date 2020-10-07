@@ -5,23 +5,21 @@ const pearsBasket = {
   max: 15,
   current: 4,
   initial: 6,
-  add: function (apples) {
-    this.current = this.current + apples;
-    if (this.current < this.max) {
+  add: function () {
+    const newPearsNumber = this.current + 1;
+    if (newPearsNumber <= this.max) {
+      this.current = newPearsNumber;
       return this.current;
-    } else if (this.current >= this.max) {
-      this.current = this.current - apples;
-      return "No puedes añadir " + apples + " peras";
     }
+    return "No puedes añadir más peras";
   },
-  remove: function (apples) {
-    this.current = this.current - apples;
-    if (this.current > this.min) {
+  remove: function () {
+    const newPearsNumber = this.current - 1;
+    if (newPearsNumber >= this.min) {
+      this.current = newPearsNumber;
       return this.current;
-    } else if (this.current <= this.min) {
-      this.current = this.current + apples;
-      return "No puedes quitar " + apples + " peras";
     }
+    return "No puedes quitar más peras";
   },
   restart: function () {
     this.current = this.initial;
@@ -30,14 +28,10 @@ const pearsBasket = {
 };
 
 console.log(pearsBasket.current);
-console.log(pearsBasket.add(5));
-console.log(pearsBasket.remove(1));
+console.log(pearsBasket.add());
+console.log(pearsBasket.remove());
 console.log(pearsBasket.current);
-console.log(pearsBasket.remove(9));
-console.log(pearsBasket.current);
-console.log(pearsBasket.restart());
-console.log(pearsBasket.current);
-console.log(pearsBasket.add(5));
-console.log(pearsBasket.add(5));
-console.log(pearsBasket.current);
-console.log(pearsBasket.restart());
+console.log(pearsBasket.remove());
+console.log(pearsBasket.remove());
+console.log(pearsBasket.remove());
+console.log(pearsBasket.remove());
