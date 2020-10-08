@@ -9,9 +9,10 @@ let arrayBooksFilms = [];
 button.addEventListener("click", function () {
   const inputValue = input.value;
   const inputValue2 = input2.value;
-  arrayBooksFilms[0] = inputValue;
-  arrayBooksFilms[1] = inputValue2;
+  arrayBooksFilms.push(inputValue);
+  arrayBooksFilms.push(inputValue2);
   for (let i of arrayBooksFilms) {
     message.innerHTML += `A mí también me encantó ${i}. `;
   }
+  console.log(arrayBooksFilms);
 });
