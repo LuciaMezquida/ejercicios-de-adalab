@@ -1,11 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #ffcc00;
+  height: 100vh;
 }
 .face {
   font-size: 200px;
+  margin-bottom: 100px;
 }
 .select {
   width: 80px;
@@ -18,4 +27,7 @@
   height: 40px;
   background-color: mediumpurple;
   border-radius: 5px;
+}
+.orange {
+  background-color: #ff9900;
 }
