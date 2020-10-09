@@ -39,22 +39,27 @@ function averageAge(arr) {
   }
   return acc / adalabers.length;
 }
-//mal
+
 function theYoungest(arr) {
+  let minAge = arr[0].age;
+  let youngest = "";
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].age < arr[i + 1].age) {
-      return arr[i].name;
+    if (minAge > arr[i].age) {
+      minAge = arr[i].age;
+      youngest = arr[i].name;
     }
   }
+  return youngest;
 }
-//mal
+
 function countDesigners(arr) {
   let designer = "";
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].job === "diseñadora") {
-      return (designer += arr[i].name + " ");
+      designer += arr[i].name + ", ";
     }
   }
+  return designer
 }
 
 console.log(countAdalabers(adalabers));
