@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.face {
+  font-size: 200px;
+}
+.select {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.button {
+  width: 100px;
+  height: 40px;
+  background-color: mediumpurple;
+  border-radius: 5px;
+}
