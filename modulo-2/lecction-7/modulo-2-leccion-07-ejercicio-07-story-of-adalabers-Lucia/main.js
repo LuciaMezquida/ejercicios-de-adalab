@@ -28,39 +28,88 @@ const adalabers = [
   },
 ];
 
-function countAdalabers(arr) {
-  return arr.length;
+function countAdalabers () {
+  return adalabers.length;
 }
 
-function averageAge(arr) {
+function averageAge () {
   let acc = 0;
-  for (let i = 0; i < arr.length; i++) {
-    acc += arr[i].age;
+  for (let i = 0; i < adalabers.length; i++) {
+    acc = acc + adalabers[i].age;
   }
-  return acc / adalabers.length;
+  return acc / adalabers.length
 }
 
-function theYoungest(arr) {
-  let minAge = arr[0].age;
-  let youngest = "";
-  for (let i = 0; i < arr.length; i++) {
-    if (minAge > arr[i].age) {
-      minAge = arr[i].age;
-      youngest = arr[i].name;
-    }
+function theYoungest () {
+  let adalaber_a_comparar = adalabers[0].age;
+  let youngest = '';
+  for (let i = 0; i < adalabers.length; i++) {
+    if(adalaber_a_comparar > adalabers[i].age)
+      adalaber_a_comparar = adalabers[i].age
+      youngest = adalabers[i].name
   }
-  return youngest;
+  return youngest 
 }
 
-function countDesigners(arr) {
-  let designer = "";
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].job === "diseñadora") {
-      designer += arr[i].name + ", ";
+
+function countDesigners () {
+  let adaDesigner = '';
+  for (let i = 0; i < adalabers.length; i++) {
+    if (adalabers[i].job === 'diseñadora') {
+      adaDesigner = adaDesigner + adalabers[i].name + ' ';
     }
+    
   }
-  return designer
+  return adaDesigner
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function countAdalabers(arr) {
+//   return arr.length;
+// }
+
+// function averageAge(arr) {
+//   let acc = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     acc += arr[i].age;
+//   }
+//   return acc / adalabers.length;
+// }
+
+// function theYoungest(arr) {
+//   let minAge = arr[0].age;
+//   let youngest = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     if (minAge > arr[i].age) {
+//       minAge = arr[i].age;
+//       youngest = arr[i].name;
+//     }
+//   }
+//   return youngest;
+// }
+
+// function countDesigners(arr) {
+//   let designer = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].job === "diseñadora") {
+//       designer += arr[i].name + ", ";
+//     }
+//   }
+//   return designer
+// }
 
 console.log(countAdalabers(adalabers));
 console.log(averageAge(adalabers));
