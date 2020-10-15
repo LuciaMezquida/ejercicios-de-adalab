@@ -53,10 +53,10 @@ function theYoungest () {
 
 
 function countDesigners () {
-  let adaDesigner = '';
+  let adaDesigner = 0;
   for (let i = 0; i < adalabers.length; i++) {
     if (adalabers[i].job === 'diseñadora') {
-      adaDesigner = adaDesigner + adalabers[i].name + ' ';
+      adaDesigner = adaDesigner + 1;
     }
     
   }
