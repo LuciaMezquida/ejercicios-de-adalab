@@ -1,10 +1,10 @@
 'use strict';
 
-function christmasTree() {
+function christmasTree(floors) {
   let acc = ''
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= floors; i++) {
     acc += '▲'
     console.log(acc) 
   }
 }
-christmasTree()
+christmasTree(8)
