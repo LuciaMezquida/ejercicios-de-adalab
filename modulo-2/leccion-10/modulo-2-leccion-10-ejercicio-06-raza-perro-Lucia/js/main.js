@@ -1,5 +1,6 @@
 'use strict';
 let breeds = '';
+let randomNumber = 0
 function getBreedsImage () {
   fetch('https://dog.ceo/api/breeds/list')
     .then(firstResponse => firstResponse.json())
@@ -10,14 +11,13 @@ function getBreedsImage () {
     })
     .then(secondResponse => secondResponse.json())
     .then(secondData => {
-      const randomNumber = secondData.result
-      console.log(randomNumber)
-      const message = document.querySelector('.message');
-      message.innerHTML = breeds[randomNumber]
+      randomNumber = secondData.result
       return fetch(`https://dog.ceo/api/breed/${breeds[randomNumber]}/images/random`);
     })
     .then(thirdResponse => thirdResponse.json())
     .then(thirdData => {
+      const message = document.querySelector('.message');
+      message.innerHTML = breeds[randomNumber]
       const image = document.querySelector('img');
       image.src = thirdData.message;
       image.alt = 'Perrete'
