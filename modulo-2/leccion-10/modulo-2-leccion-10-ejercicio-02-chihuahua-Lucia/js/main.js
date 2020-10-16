@@ -1,17 +1,10 @@
 'use strict'
 
-function getDogImage() {
-  getChihuahuaImage()
-}
 const btn = document.querySelector(".js-dog");
-btn.addEventListener("click", getDogImage);
+btn.addEventListener("click", getChihuahuaImage);
 
-
-function getDogImage2() {
-  getChihuahuaImage()
-}
 const btn2 = document.querySelector(".js-dog2");
-btn2.addEventListener("click", getDogImage2);
+btn2.addEventListener("click", getChihuahuaImage);
 
 
 function getChihuahuaImage() {
@@ -19,7 +12,7 @@ function getChihuahuaImage() {
   .then(response => response.json())
   .then(data => {
     const img = document.querySelector("img");
-    img.src = data.message;
-    img.alt = "Un perro";
+      img.src = data.message;
+      img.alt = "Un perro";
   });
 }
