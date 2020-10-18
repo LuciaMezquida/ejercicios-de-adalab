@@ -25,6 +25,5 @@ document.querySelector(".js-btn").addEventListener("click", getCharacter);
 
 function recoveryInfo(characterInput) {
   const info = JSON.parse(localStorage.getItem(characterInput));
-  console.log(info);
   result.innerHTML += `<li>Personaje: ${info.name}. Género: ${info.gender}</li>`;
 }
