@@ -77,9 +77,10 @@ container.innerHTML += '<ul class="js-list"></ul>';
 
 const containerList = document.querySelector('.js-list');
 
-let studentsNumber = 0;
 for (let i = 0; i < promos.length; i++) {
-  studentsNumber += promos[i].length
-  containerList.innerHTML += `<li class="js-list-item"><p>Promo ${promos[i].promo}: ${promos[i].name}. Tiene ${promos[i].length} alumnas</li>`
+  containerList.innerHTML += `<li class="js-list-item">
+  <p>Nombre: ${promos[i].name}</p>
+  <p>Promo: ${promos[i].promo}</p>
+  <p>Número de alumnas: ${promos[i].students.length}</p></li>`
 }
 
