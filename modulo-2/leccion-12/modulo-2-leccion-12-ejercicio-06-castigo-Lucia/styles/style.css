@@ -5,6 +5,7 @@
 }
 
 body {
+  padding: 20px;
   background-color: rgb(24, 22, 22);
   color: whitesmoke;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
