@@ -1,0 +1,10 @@
+.header {
+  background-color: antiquewhite;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+}
