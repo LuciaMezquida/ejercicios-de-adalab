@@ -18,14 +18,24 @@ for (let i = 0; i < 100; i++) {
 }
 
 const allSelects = document.querySelectorAll("select");
-const allParagraphs
+const allParagraphs = document.querySelectorAll("p");
 function changeColor(event) {
+  console.log(event.target.selectedIndex);
   if (event.target.value === "white") {
+    allParagraphs[0].style.color = "white";
+  } else if (event.target.value === "blue") {
+    allParagraphs[0].style.color = "blue";
+  } else if (event.target.value === "red") {
+    allParagraphs[0].style.color = "red";
+  } else if (event.target.value === "green") {
+    allParagraphs[0].style.color = "green";
+  } else if (event.target.value === "yellow") {
+    allParagraphs[0].style.color = "yellow";
+  } else if (event.target.value === "pink") {
+    allParagraphs[0].style.color = "pink";
   }
 }
 
-allSelects[0].addEventListener("change", changeColor);
-
-// for (let item of allSelects) {
-//   item.addEventListener("change", changeColor);
-// }
+for (let item of allSelects) {
+  item.addEventListener("change", changeColor);
+}
