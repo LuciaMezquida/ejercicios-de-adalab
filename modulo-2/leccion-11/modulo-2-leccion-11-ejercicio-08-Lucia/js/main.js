@@ -5,9 +5,9 @@ let characterInfo = {
   name: "Nombre",
   gender: "Género",
 };
+let character = document.querySelector(".js-cast").value;
 
 function getCharacter() {
-  let character = document.querySelector(".js-cast").value;
   if (localStorage.getItem(character)) {
     recoveryInfo(character);
   } else {
@@ -27,3 +27,4 @@ function recoveryInfo(characterInput) {
   const info = JSON.parse(localStorage.getItem(characterInput));
   result.innerHTML += `<li>Personaje: ${info.name}. Género: ${info.gender}</li>`;
 }
+recoveryInfo(character);
