@@ -10,4 +10,4 @@ const runners = [
 const winner = runners.reduce((acc, item) => {
   return acc.time < item.time ? acc : item;
 });
-console.log(winner);
+console.log("The winner is: " + winner.name);
