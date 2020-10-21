@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.btn {
+  background-color: blueviolet;
+  color: white;
+  width: 300px;
+  height: 100px;
+  font-size: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  border: none;
+  border-radius: 10px;
+}
