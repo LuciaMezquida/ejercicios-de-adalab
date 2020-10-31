@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import lucia from "./Lucia.jpg";
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
 class App extends React.Component {
   constructor(props) {
