@@ -1,12 +1,12 @@
 import React from "react";
 import "../App.css";
-import RandomCat from "./RandomCat";
+import CatList from "./CatList";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <RandomCat />
+        <CatList />
       </div>
     );
   }
