@@ -1,9 +1,8 @@
-import logo from "./logo.svg";
-import lucia from "./Lucia.jpg";
+import lucia from "../Lucia.jpg";
 import React from "react";
-import "./App.css";
+import "../App.css";
 
-class App extends React.Component {
+class MediaCard extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -42,4 +41,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default MediaCard;
