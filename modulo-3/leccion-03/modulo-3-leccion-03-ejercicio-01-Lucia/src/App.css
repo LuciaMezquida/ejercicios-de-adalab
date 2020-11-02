@@ -1,0 +1,45 @@
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 400px;
+  height: 450px;
+  box-shadow: 1px 1px 16px 5px rgba(0, 0, 0, 0.51);
+}
+.App-logo {
+  width: 80px;
+  border-radius: 50%;
+}
+.App-header {
+  display: flex;
+  padding: 15px;
+}
+.title {
+  font-size: 23px;
+  font-weight: 700;
+}
+.title-container {
+  margin-left: 10px;
+  line-height: 10px;
+}
+.main-text {
+  padding: 15px;
+  line-height: 20px;
+}
+.footer {
+  padding: 0 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.likes-container {
+  display: flex;
+  align-items: center;
+}
+.fa-heart {
+  color: red;
+  font-size: 30px;
+  margin-left: 10px;
+}
