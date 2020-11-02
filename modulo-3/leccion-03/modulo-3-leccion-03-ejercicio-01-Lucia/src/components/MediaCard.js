@@ -1,4 +1,3 @@
-import lucia from "../Lucia.jpg";
 import React from "react";
 import "../App.css";
 
@@ -12,27 +11,20 @@ class MediaCard extends React.Component {
       <div className="App">
         <div className="container">
           <header className="App-header">
-            <img src={lucia} className="App-logo" alt="logo" />
+            <img src={this.props.image} className="App-logo" alt="logo" />
             <div className="title-container">
-              <p className="title">Lucía Mezquida</p>
-              <p>Sábado 31 de Octubre de 2020</p>
+              <p className="title">{this.props.name}</p>
+              <p>{this.props.date}</p>
             </div>
           </header>
           <main>
-            <p className="main-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit quo ducimus facilis
-              libero, natus maxime dolorem voluptatem officiis. Fugit laudantium sed architecto
-              commodi eum quae maiores corrupti recusandae consequuntur necessitatibus. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Cumque dignissimos saepe molestiae quidem
-              provident voluptates sunt ea natus alias rem? Perspiciatis, dolorem! At in omnis animi
-              similique fugit eius doloribus.
-            </p>
+            <p className="main-text">{this.props.text}</p>
           </main>
           <footer className="footer">
             <p className="footer-text">Leer más...</p>
             <div className="likes-container">
-              <p>37</p>
-              <i class="fas fa-heart"></i>
+              <p>{this.props.likes}</p>
+              <i class="fas fa-heart">{this.props.heart}</i>
             </div>
           </footer>
         </div>
