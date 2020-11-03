@@ -4,11 +4,21 @@ const getRandomInteger = (maxNumber) => Math.floor(Math.random() * maxNumber);
 const NUMBER_OF_CATS = 10;
 
 class RandomCat extends React.Component {
+  constructor(props, width, height) {
+    super(props);
+    this.width = width;
+    this.height = height;
+  }
   render() {
     const randomCat = getRandomInteger(NUMBER_OF_CATS);
     return (
       <a href="http://lorempixel.com">
-        <img src={`http://lorempixel.com/400/200/cats/${randomCat}`} alt="Random cat" />
+        <img
+          src={`http://lorempixel.com/400/200/cats/${randomCat}`}
+          alt="Random cat"
+          width={this.props.width}
+          height={this.props.height}
+        />
       </a>
     );
   }
