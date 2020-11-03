@@ -8,10 +8,10 @@ class CatList extends React.Component {
         <h1>All Cats Are Beautiful</h1>
         <ul className="section-cats_list">
           <li>
-            <RandomCat width="200px" height="200px" />
+            <RandomCat />
           </li>
           <li>
-            <RandomCat width="200px" height="400px" />
+            <RandomCat />
           </li>
           <li>
             <RandomCat />
