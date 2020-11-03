@@ -27,11 +27,12 @@ const arrayOfItems = [
 
 class ItemList extends React.Component {
   render() {
-    const name = arrayOfItems.map((item) => item.name);
-    const description = arrayOfItems.map((item) => item.description);
-    const quantity = arrayOfItems.map((item) => item.quantity);
-    const category = arrayOfItems.map((item) => item.category);
-    const price = arrayOfItems.map((item) => item.price);
+    const array = arrayOfItems.filter((item) => item.price < 10);
+    const name = array.map((item) => item.name);
+    const description = array.map((item) => item.description);
+    const quantity = array.map((item) => item.quantity);
+    const category = array.map((item) => item.category);
+    const price = array.map((item) => item.price);
     return (
       <ul className="item-list">
         <li>
