@@ -10,9 +10,16 @@ class Item extends React.Component {
           <h6 className="text-muted">{this.props.description}</h6>
         </div>
         <div className="badge badge-info">{this.props.category}</div>
-        <h5 className="price">{this.props.price}€</h5>
+        <h5 className="price">{this.props.price} €</h5>
       </div>
     );
   }
 }
+Item.defaultProps = {
+  quantity: "No hay descripcion",
+  name: "No hay descripcion",
+  description: "No hay descripcion",
+  category: "No hay descripcion",
+  price: "No hay descripcion",
+};
 export default Item;
