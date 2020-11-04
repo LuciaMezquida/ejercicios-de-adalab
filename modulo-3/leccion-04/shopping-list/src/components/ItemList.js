@@ -27,6 +27,14 @@ const arrayOfItems = [
 
 class ItemList extends React.Component {
   render() {
+    // const listItems = arrayOfItems.map((item) => (
+    //   <li>
+    //     name={item.name}
+    //     description={item.description}
+    //     quantity={item.quantity}
+    //     category={item.category}
+    //     price={item.price}
+    //   </li>
     const array = arrayOfItems.filter((item) => item.price < 10);
     const name = array.map((item) => item.name);
     const description = array.map((item) => item.description);
