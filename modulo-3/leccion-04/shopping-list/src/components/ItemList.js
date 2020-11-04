@@ -29,15 +29,26 @@ class ItemList extends React.Component {
   render() {
     const listItems = arrayOfItems.filter((item) => item.price < 10);
     const newListItems = listItems.map((item) => (
-      <li>
-        <Item
-          name={item.name}
-          description={item.description}
-          quantity={item.quantity}
-          category={item.category}
-          price={item.price}
-        />
-      </li>
+      <>
+        <li>
+          <Item
+            name={item.name}
+            description={item.description}
+            quantity={item.quantity}
+            category={item.category}
+            price={item.price}
+          />
+        </li>
+        <li>
+          <Item
+            name={8}
+            description="mantequilla de cacahuete"
+            quantity={1}
+            category="Snack"
+            price="8"
+          />
+        </li>
+      </>
     ));
     return <ul className="item-list">{newListItems}</ul>;
   }

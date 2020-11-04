@@ -16,18 +16,15 @@ class Item extends React.Component {
     );
   }
 }
-// Item.defaultProps = {
-//   quantity: "No hay descripcion",
-//   name: "No hay descripcion",
-//   description: "No hay descripcion",
-//   category: "No hay descripcion",
-//   price: "No hay descripcion",
-// };
-Item.propTypes = {
-  quantity: "No hay descripcion",
-  name: "No hay descripcion",
+
+Item.defaulProps = {
   description: "No hay descripcion",
   category: "No hay descripcion",
   price: "No hay descripcion",
+};
+
+Item.propTypes = {
+  name: PropTypes.any.isRequired,
+  price: PropTypes.number.isRequired,
 };
 export default Item;
