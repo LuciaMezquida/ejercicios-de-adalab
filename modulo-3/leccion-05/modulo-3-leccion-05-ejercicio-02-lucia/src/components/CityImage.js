@@ -17,6 +17,7 @@ class CityImage extends React.Component {
   render() {
     return (
       <div className="image">
+        <p>Tu destino es viajar a {this.props.city}</p>
         <img src={this.cities[this.props.city]} alt={this.props.city} />
       </div>
     );
