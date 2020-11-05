@@ -17,11 +17,13 @@ class RandomMurray extends React.Component {
     const randomMurray = getRandomInteger(MAX_SIZE, MIN_SIZE);
 
     return (
-      <img
-        src={`http://www.fillmurray.com/200/${randomMurray}`}
-        alt="Random murray"
-        onClick={this.handleClick}
-      />
+      <div className="murray">
+        <img
+          src={`http://www.fillmurray.com/200/${randomMurray}`}
+          alt="Random murray"
+          onClick={this.handleClick}
+        />
+      </div>
     );
   }
 }
