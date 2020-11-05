@@ -30,22 +30,13 @@ class ItemList extends React.Component {
     const listItems = arrayOfItems.filter((item) => item.price < 10);
     const newListItems = listItems.map((item) => (
       <>
-        <li>
+        <li key={item.name}>
           <Item
             name={item.name}
             description={item.description}
             quantity={item.quantity}
             category={item.category}
             price={item.price}
-          />
-        </li>
-        <li>
-          <Item
-            name={8}
-            description="mantequilla de cacahuete"
-            quantity={1}
-            category="Snack"
-            price="8"
           />
         </li>
       </>
