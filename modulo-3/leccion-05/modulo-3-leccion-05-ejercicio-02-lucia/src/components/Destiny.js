@@ -1,9 +1,16 @@
 import React from "react";
+import CityImage from "./CityImage";
 
 class Destiny extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myCity = "...";
+    this.handleChange = this.handleChange.bind(this);
+  }
   handleChange(event) {
-    const city = event.currentTarget.value;
-    alert("Tu destino es viajar a " + city);
+    this.destiny = event.currentTarget.value;
+    alert("Tu destino es viajar a " + this.destiny);
+    this.forceUpdate();
   }
   render() {
     return (
@@ -19,6 +26,7 @@ class Destiny extends React.Component {
           <option value="Boston">Boston</option>
           <option value="Tokio">Tokio</option>
         </select>
+        <CityImage city={this.destiny} />
       </div>
     );
   }
