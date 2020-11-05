@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import HalfPage from "./HalfPage";
+import OtherHalfPage from "./OtherHalfPage";
 
 class App extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class App extends React.Component {
             exercitationem vero voluptas officia, recusandae dolorum!
           </p>
         </HalfPage>
-        <HalfPage>
+        <OtherHalfPage>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus magni voluptate nisi
             odit? Reprehenderit adipisci officia ducimus obcaecati similique, dolorem corrupti
@@ -29,7 +30,7 @@ class App extends React.Component {
             suscipit soluta accusantium quo sapiente voluptates est molestias mollitia,
             exercitationem vero voluptas officia, recusandae dolorum!
           </p>
-        </HalfPage>
+        </OtherHalfPage>
       </div>
     );
   }

@@ -6,7 +6,7 @@ class HalfPage extends React.Component {
   }
 
   render() {
-    return <div className="HalfPage">{this.props.children}</div>;
+    return <div className="OtherHalfPage">{this.props.children}</div>;
   }
 }
 
