@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "./Item";
+import CategoryButton from "./CategoryButton";
 
 const arrayOfItems = [
   {
@@ -26,8 +27,20 @@ const arrayOfItems = [
 ];
 
 class ItemList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.btnInfo = "";
+    this.handleEachButton = this.handleEachButton.bind(this);
+  }
+  handleEachButton(info) {
+    this.btnInfo = info.currentTarget.innerHTML;
+    this.forceUpdate();
+  }
   render() {
-    const listItems = arrayOfItems.filter((item) => item.price < 10);
+    const listCategories = arrayOfItems.map((item, index) => (
+      <CategoryButton key={index} category={item.category} handleClick={this.handleEachButton} />
+    ));
+    const listItems = arrayOfItems.filter((item) => item.category === this.btnInfo);
     const newListItems = listItems.map((item, index) => (
       <li key={index}>
         <Item
@@ -39,7 +52,12 @@ class ItemList extends React.Component {
         />
       </li>
     ));
-    return <ul className="item-list">{newListItems}</ul>;
+    return (
+      <>
+        {listCategories}
+        <ul className="item-list">{newListItems}</ul>
+      </>
+    );
   }
 }
 export default ItemList;
