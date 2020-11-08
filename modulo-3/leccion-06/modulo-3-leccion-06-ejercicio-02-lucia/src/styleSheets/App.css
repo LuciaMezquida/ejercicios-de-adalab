@@ -1,0 +1,12 @@
+.App {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
