@@ -2,8 +2,8 @@
 import React from "react";
 import InputText from "./InputText";
 
-const handleFormInput = (data) => {
-  console.log(data);
+const handleFormInput = (name, value) => {
+  console.log(name, value);
 };
 
 const Form = () => {
