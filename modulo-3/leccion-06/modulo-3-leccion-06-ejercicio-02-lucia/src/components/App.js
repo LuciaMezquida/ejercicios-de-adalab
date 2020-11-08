@@ -11,17 +11,9 @@ class App extends React.Component {
   }
   handleChangeColor() {
     console.log("click");
-    this.setState((prevState, props) => {
-      let nextBackground;
-      if (prevState.background === "red") {
-        nextBackground = "green";
-      } else {
-        nextBackground = "red";
-      }
-      return {
-        background: nextBackground,
-      };
-    });
+    this.setState((prevState, props) => ({
+      background: prevState.background === "red" ? "green" : "red",
+    }));
   }
 
   render() {
