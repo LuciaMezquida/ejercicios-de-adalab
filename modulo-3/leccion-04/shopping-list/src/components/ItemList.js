@@ -1,6 +1,7 @@
 import React from "react";
 import Item from "./Item";
 import CategoryButton from "./CategoryButton";
+import ShowAllButton from "./ShowAllButton";
 
 const arrayOfItems = [
   {
@@ -30,8 +31,16 @@ class ItemList extends React.Component {
   constructor(props) {
     super(props);
     this.btnInfo = "";
+    this.allButton = "";
+    this.newListItems = arrayOfItems;
     this.handleEachButton = this.handleEachButton.bind(this);
+    this.handleAllButton = this.handleAllButton.bind(this);
   }
+  handleAllButton(info) {
+    this.allButton = info.currentTarget.innerHTML;
+    this.forceUpdate();
+  }
+
   handleEachButton(info) {
     this.btnInfo = info.currentTarget.innerHTML;
     this.forceUpdate();
@@ -40,22 +49,37 @@ class ItemList extends React.Component {
     const listCategories = arrayOfItems.map((item, index) => (
       <CategoryButton key={index} category={item.category} handleClick={this.handleEachButton} />
     ));
-    const listItems = arrayOfItems.filter((item) => item.category === this.btnInfo);
-    const newListItems = listItems.map((item, index) => (
-      <li key={index}>
-        <Item
-          name={item.name}
-          description={item.description}
-          quantity={item.quantity}
-          category={item.category}
-          price={item.price}
-        />
-      </li>
-    ));
+    if (this.allButton === "Todos") {
+      this.newListItems = arrayOfItems.map((item, index) => (
+        <li key={index}>
+          <Item
+            name={item.name}
+            description={item.description}
+            quantity={item.quantity}
+            category={item.category}
+            price={item.price}
+          />
+        </li>
+      ));
+    } else {
+      const listItems = arrayOfItems.filter((item) => item.category === this.btnInfo);
+      this.newListItems = listItems.map((item, index) => (
+        <li key={index}>
+          <Item
+            name={item.name}
+            description={item.description}
+            quantity={item.quantity}
+            category={item.category}
+            price={item.price}
+          />
+        </li>
+      ));
+    }
     return (
       <>
+        <ShowAllButton handleButton={this.handleAllButton} />
         {listCategories}
-        <ul className="item-list">{newListItems}</ul>
+        <ul className="item-list">{this.newListItems}</ul>
       </>
     );
   }
