@@ -1,7 +1,14 @@
 import "../styleSheets/App.css";
+import React from "react";
 
-function App() {
-  return <div className="App">Hola</div>;
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return <div className="App">Hola</div>;
+  }
 }
 
 export default App;
