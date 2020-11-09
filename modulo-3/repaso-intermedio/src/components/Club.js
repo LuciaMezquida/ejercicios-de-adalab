@@ -9,7 +9,7 @@ class Club extends React.Component {
         <p>{this.props.name}</p>
         <ul>
           {this.props.members.map((item) => (
-            <li>{item}</li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
       </div>

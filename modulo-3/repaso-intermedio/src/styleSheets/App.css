@@ -1,3 +1,9 @@
 .App {
-  text-align: center;
+  margin-bottom: 30px;
+}
+li {
+  list-style: none;
+}
+p {
+  text-transform: uppercase;
 }
