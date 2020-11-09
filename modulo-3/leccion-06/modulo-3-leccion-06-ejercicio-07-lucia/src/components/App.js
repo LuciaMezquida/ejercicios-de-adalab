@@ -1,10 +1,13 @@
 import "../styleSheets/App.css";
 import React from "react";
-import UserInfo from "./UserInfo";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    return <UserInfo />;
+    return <div className="App">Hola</div>;
   }
 }
 
