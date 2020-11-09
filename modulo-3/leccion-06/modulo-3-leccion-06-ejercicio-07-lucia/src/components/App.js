@@ -1,5 +1,6 @@
 import "../styleSheets/App.css";
 import React from "react";
+import FruitBasket from "./FruitBasket";
 
 class App extends React.Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class App extends React.Component {
   }
 
   render() {
-    return <div className="App">Hola</div>;
+    return <FruitBasket />;
   }
 }
 
