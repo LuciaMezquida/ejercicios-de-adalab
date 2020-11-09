@@ -1,14 +1,19 @@
 import "../styleSheets/App.css";
-import React from "react";
+import React, { useState } from "react";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return <div className="App">Hola</div>;
-  }
+function App() {
+  const [number, setNumber] = useState(38);
+  const getOlder = () => {
+    setNumber(number + 1);
+  };
+  return (
+    <div className="App">
+      <p className="text">Hoy tengo {number} años de edad</p>
+      <button onClick={getOlder} className="btn">
+        Hazme más viejo
+      </button>
+    </div>
+  );
 }
 
 export default App;
