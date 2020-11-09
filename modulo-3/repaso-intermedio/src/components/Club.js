@@ -4,9 +4,10 @@ import PropTypes from "prop-types";
 class Club extends React.Component {
   render() {
     return (
-      <div className="App">
+      <div className="club">
         <i className={this.props.class}></i>
-        <p>{this.props.name}</p>
+        <p className="title">{this.props.name}</p>
+        <p className="members">Members:</p>
         <ul>
           {this.props.members.map((item) => (
             <li key={item}>{item}</li>
