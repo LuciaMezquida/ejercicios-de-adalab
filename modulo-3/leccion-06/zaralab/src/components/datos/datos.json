@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Camiseta",
+    "price": 39,
+    "src": "./images/tshirt-simple-by_vexels.png"
+  },
+  {
+    "name": "Pantalón",
+    "price": 59,
+    "src": "./images/pants-simple-by_vexels.png"
+  },
+  {
+    "name": "Botas",
+    "price": 89,
+    "src": "./images/arctic-boots-illustration-by-Vexels.png"
+  },
+  {
+    "name": "Mantitas suaves",
+    "price": 14,
+    "src": "./images/winter-blankets-flat-by-Vexels.png"
+  }
+]
