@@ -16,7 +16,7 @@ body {
 .icon {
   font-size: 80px;
   color: rgb(34, 151, 135);
-  padding-right: 20px;
+  padding: 0 20px;
 }
 .list {
   list-style: none;
