@@ -3,13 +3,40 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: rgb(226, 223, 223);
+}
 
 .club {
   margin: 30px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
 }
-li {
+.icon {
+  font-size: 80px;
+  color: rgb(34, 151, 135);
+  padding-right: 20px;
+}
+.list {
   list-style: none;
 }
+.text {
+  margin-left: 30px;
+}
 .title {
-  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.list-members {
+  margin-right: 30px;
+}
+.members {
+  opacity: 0.3;
 }
