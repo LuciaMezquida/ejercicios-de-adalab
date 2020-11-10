@@ -23,7 +23,9 @@ class Clock extends React.Component {
   render() {
     return (
       <div className="container">
-        <p className="clock">{`${this.state.hora} : ${this.state.minutos} : ${this.state.segundos}`}</p>
+        <p className="clock">{`${this.state.hora} : ${this.state.minutos
+          .toString()
+          .padStart(2, "0")} : ${this.state.segundos.toString().padStart(2, "0")}`}</p>
       </div>
     );
   }
