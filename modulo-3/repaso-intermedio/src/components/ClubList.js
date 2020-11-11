@@ -12,5 +12,7 @@ class ClubList extends React.Component {
     return <ul>{dataList}</ul>;
   }
 }
-
+ClubList.propTypes = {
+  data: PropTypes.array,
+};
 export default ClubList;

@@ -1,4 +1,5 @@
 {
+  "homepage": "./",
   "name": "module-3-leccion-05-ejercicio-08-lucia",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docs": 	"rm -rf docs && react-scripts build && mv build docs"
   },
   "eslintConfig": {
     "extends": [

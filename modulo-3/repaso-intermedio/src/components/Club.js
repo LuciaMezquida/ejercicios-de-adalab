@@ -7,8 +7,8 @@ class Club extends React.Component {
       <div className="club">
         <i className={this.props.class + " icon"}></i>
         <div className="text">
-          <p className="title">{this.props.name}</p>
-          <p className="members">Members:</p>
+          <h2 className="title">{this.props.name}</h2>
+          <h3 className="members">Members:</h3>
           <ul className="list-container">
             {this.props.members.map((item) => (
               <li className="list list-members" key={item}>
@@ -21,5 +21,10 @@ class Club extends React.Component {
     );
   }
 }
+Club.propTypes = {
+  class: PropTypes.string,
+  name: PropTypes.string,
+  members: PropTypes.arrayOf(PropTypes.string),
+};
 
 export default Club;
