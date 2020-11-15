@@ -1,3 +1,14 @@
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.collapsed {
+  display: none;
+}
+.fas {
+  padding-left: 20px;
+}
+.turn {
+  margin-left: 20px;
+  transform: rotate(180deg);
 }
