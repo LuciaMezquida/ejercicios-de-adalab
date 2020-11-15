@@ -15,8 +15,6 @@ class Collapsible extends React.Component {
       isOpen: !this.state.isOpen,
       isUp: !this.state.isUp,
     });
-    console.log(this.state.isOpen);
-    console.log(this.state.isUp);
   }
   render() {
     const openCollapsible = this.state.isOpen ? "" : "collapsed";

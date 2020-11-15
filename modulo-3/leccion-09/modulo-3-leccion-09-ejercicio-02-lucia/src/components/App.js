@@ -13,7 +13,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.shipNames);
     const listShipNames = this.state.shipNames.map((item, index) => (
       <li key={index}>
         <Collapsible name={item.name}>
