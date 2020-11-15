@@ -10,18 +10,24 @@ const users = [
 ];
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const [name1, name2, name3] = users;
+    // const [name1, name2, name3] = users;
+    // return (
+    //   <div className="App">
+    //     <ul>
+    //       <li key={name1.time}>{name1.name}</li>
+    //       <li key={name2.time}>{name2.name}</li>
+    //       <li key={name3.time}>{name3.name}</li>
+    //     </ul>
+    //   </div>
+    // );
+    const [{ name: a, time: first }, { name: b, time: second }, { name: c, time: third }] = users;
     return (
       <div className="App">
         <ul>
-          <li key={name1.time}>{name1.name}</li>
-          <li key={name2.time}>{name2.name}</li>
-          <li key={name3.time}>{name3.name}</li>
+          <li key={first}>{a}</li>
+          <li key={second}>{b}</li>
+          <li key={third}>{c}</li>
         </ul>
       </div>
     );
