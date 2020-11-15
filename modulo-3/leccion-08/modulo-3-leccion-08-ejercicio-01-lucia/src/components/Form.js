@@ -67,6 +67,7 @@ class Form extends React.Component {
       const myFile = e.currentTarget.files[0];
       fr.readAsDataURL(myFile);
     }
+    const { fileName, fileUrl, input, inputDescription, inputLanguage } = this.state;
     return (
       <>
         <form action="" className="form">
@@ -80,7 +81,7 @@ class Form extends React.Component {
             cols="30"
             rows="10"
           ></textarea>
-          <select onClick={this.handleInput} name="language" id="language">
+          <select onChange={this.handleInput} name="language" id="language">
             <option value="default" disabled>
               Elige un idioma
             </option>
@@ -93,16 +94,16 @@ class Form extends React.Component {
 
             <button onClick={this.fakeClick}>Click</button>
 
-            <h2>{this.state.fileName}</h2>
+            <h2>{fileName}</h2>
 
-            <img className="img" src={this.state.fileUrl} alt={this.state.fileName} />
+            <img className="img" src={fileUrl} alt={fileName} width="200" height="200" />
 
-            <div className="bg" style={{ backgroundImage: `url(${this.state.fileUrl})` }}></div>
+            <div className="bg" style={{ backgroundImage: `url(${fileUrl})` }}></div>
           </div>
         </form>
-        <p>{this.state.input}</p>
-        <p>{this.state.inputDescription}</p>
-        <p>{this.state.inputLanguage}</p>
+        <p>{input}</p>
+        <p>{inputDescription}</p>
+        <p>{inputLanguage}</p>
       </>
     );
   }
