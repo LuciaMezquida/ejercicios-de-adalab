@@ -45,18 +45,19 @@ class Form extends React.Component {
     });
   }
   handleInput(ev) {
-    console.log(ev.currentTarget.value);
-    if (ev.currentTarget.id === "name") {
+    const { value, id } = ev.currentTarget;
+    console.log(value);
+    if (id === "name") {
       this.setState({
-        input: ev.currentTarget.value,
+        input: value,
       });
-    } else if (ev.currentTarget.id === "description") {
+    } else if (id === "description") {
       this.setState({
-        inputDescription: ev.currentTarget.value,
+        inputDescription: value,
       });
-    } else if (ev.currentTarget.id === "language") {
+    } else if (id === "language") {
       this.setState({
-        inputLanguage: ev.currentTarget.value,
+        inputLanguage: value,
       });
     }
   }
@@ -92,7 +93,9 @@ class Form extends React.Component {
           <div className="app">
             <input type="file" ref={this.fileInput} onChange={this.handleFileChange} />
 
-            <button onClick={this.fakeClick}>Click</button>
+            <button className="fake-click" onClick={this.fakeClick}>
+              Click
+            </button>
 
             <h2>{fileName}</h2>
 

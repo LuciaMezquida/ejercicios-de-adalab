@@ -6,3 +6,6 @@ input,
 select {
   display: block;
 }
+.fake-click {
+  display: none;
+}
