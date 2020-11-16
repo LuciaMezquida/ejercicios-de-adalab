@@ -2,6 +2,7 @@ import "../styleSheets/App.css";
 import React from "react";
 import fetchPeople from "../services/ApiComponent";
 import CardsList from "./CardsList";
+import FilterList from "./FilterList";
 
 class App extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class App extends React.Component {
       personInfo: "",
     };
     this.newApiComponent = this.newApiComponent.bind(this);
+    this.handleFilter = this.handleFilter.bind(this);
   }
   newApiComponent() {
     fetchPeople().then((data) => {
@@ -18,13 +20,17 @@ class App extends React.Component {
       });
     });
   }
+  handleFilter(ev) {
+    console.log(ev.currentTarget.name);
+    if (ev.currentTarget.name === "gender") {
+    }
+  }
 
   render() {
-    // const { personInfo } = this.state;
-    console.log(this.state.personInfo);
     return (
       <div className="App">
         <button onClick={this.newApiComponent}>Click</button>
+        <FilterList handleFilter={this.handleFilter} personInfo={this.state.personInfo} />
         {this.state.personInfo.length === 0 ? (
           <img src="//s.svgbox.net/loaders.svg?fill=805ad5#hearts" />
         ) : (
