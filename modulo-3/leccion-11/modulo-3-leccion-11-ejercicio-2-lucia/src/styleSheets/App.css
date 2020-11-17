@@ -2,7 +2,19 @@
   text-align: center;
 }
 .list {
-  display: flex;
   list-style: none;
-  margin-bottom: 20px;
+  border: 2px solid black;
+  height: 28vh;
+  margin: 10px;
+}
+.people-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.image-container {
+  padding-top: 10px;
+}
+.link {
+  text-decoration: none;
 }

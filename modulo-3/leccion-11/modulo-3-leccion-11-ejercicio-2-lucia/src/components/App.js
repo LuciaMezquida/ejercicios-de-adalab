@@ -4,6 +4,7 @@ import fetchPeople from "../services/ApiComponent";
 import CardsList from "./CardsList";
 import FilterList from "./FilterList";
 import { Route, Switch } from "react-router-dom";
+import PersonDetail from "./PersonDetail";
 
 class App extends React.Component {
   constructor(props) {
@@ -63,13 +64,14 @@ class App extends React.Component {
         {this.state.personInfo.length === 0 ? (
           <img src="//s.svgbox.net/loaders.svg?fill=805ad5#hearts" />
         ) : (
-          <main>
-            <Switch>
-              <Route exact path="/">
-                <CardsList personInfo={this.state.personInfo} />
-              </Route>
-            </Switch>
-          </main>
+          <Switch>
+            <Route path="/">
+              <CardsList personInfo={this.state.personInfo} />
+            </Route>
+            <Route path="/user">
+              <PersonDetail personInfo={this.state.personInfo} />
+            </Route>
+          </Switch>
         )}
       </div>
     );
