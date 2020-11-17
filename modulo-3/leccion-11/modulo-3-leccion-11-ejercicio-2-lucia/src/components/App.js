@@ -23,7 +23,6 @@ class App extends React.Component {
     });
   }
   handleFilter(ev) {
-    console.log(ev.currentTarget.name);
     if (ev.currentTarget.name === "male" && ev.currentTarget.checked === true) {
       const male = this.state.personInfo.filter((item) => item.gender === "male");
       this.setState({
@@ -55,6 +54,20 @@ class App extends React.Component {
       });
     }
   }
+  renderPersonDetail(props) {
+    console.log(props);
+    const routeCharacterId = parseInt(props.match.params.userId);
+    const person = this.state.personInfo.find((user) => user.id.value === routeCharacterId);
+    if (person) {
+      <PersonDetail
+        image={person.picture.medium}
+        name={person.name.first}
+        lastName={person.name.last}
+        city={person.location.city}
+        age={person.dob.age}
+      />;
+    }
+  }
 
   render() {
     return (
@@ -68,9 +81,7 @@ class App extends React.Component {
             <Route path="/">
               <CardsList personInfo={this.state.personInfo} />
             </Route>
-            <Route path="/user">
-              <PersonDetail personInfo={this.state.personInfo} />
-            </Route>
+            <Route path="/user/:userId" render={this.renderPersonDetail} />
           </Switch>
         )}
       </div>

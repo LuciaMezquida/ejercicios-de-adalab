@@ -7,7 +7,7 @@ class CardsList extends React.Component {
     const peopleList = this.props.personInfo.map((item, index) => (
       <Cards
         key={index}
-        id={index}
+        id={item.id.value}
         image={item.picture.medium}
         name={item.name.first}
         lastName={item.name.last}
