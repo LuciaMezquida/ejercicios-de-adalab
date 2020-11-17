@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.hearts {
+  margin-top: 20%;
+}
 .list {
   list-style: none;
   border: 2px solid black;

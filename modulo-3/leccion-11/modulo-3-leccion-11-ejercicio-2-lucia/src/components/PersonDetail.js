@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 class PersonDetail extends React.Component {
   render() {
@@ -20,5 +19,4 @@ class PersonDetail extends React.Component {
     );
   }
 }
-PersonDetail.propTypes = {};
 export default PersonDetail;

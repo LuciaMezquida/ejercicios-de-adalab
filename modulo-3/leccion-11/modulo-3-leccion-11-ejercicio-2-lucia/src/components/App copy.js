@@ -60,28 +60,36 @@ class App extends React.Component {
     const routeCharacterId = props.match.params.userId;
     const person = this.state.personInfo.find((user) => user.login.uuid === routeCharacterId);
     if (person) {
-      return (
-        <PersonDetail
-          image={person.picture.medium}
-          name={person.name.first}
-          lastName={person.name.last}
-          city={person.location.city}
-          age={person.dob.age}
-        />
-      );
+      <PersonDetail
+        image={person.picture.medium}
+        name={person.name.first}
+        lastName={person.name.last}
+        city={person.location.city}
+        age={person.dob.age}
+      />;
     }
   }
   render() {
     return (
       <div className="App">
-        <Switch>
-          <Route path="/user/:userId" render={this.renderPersonDetail} />
-          <Route path="/">
-            <button onClick={this.newApiComponent}>Click</button>
-            <FilterList handleFilter={this.handleFilter} personInfo={this.state.personInfo} />
-            <CardsList personInfo={this.state.personInfo} />
-          </Route>
-        </Switch>
+        <button onClick={this.newApiComponent}>Click</button>
+        <FilterList handleFilter={this.handleFilter} personInfo={this.state.personInfo} />
+        {this.state.personInfo.length === 0 ? (
+          <img
+            className="hearts"
+            width="200"
+            height="100"
+            alt="hearts"
+            src="//s.svgbox.net/loaders.svg?fill=805ad5#hearts"
+          />
+        ) : (
+          <Switch>
+            <Route path="/">
+              <CardsList personInfo={this.state.personInfo} />
+            </Route>
+            <Route path="/user/:userId" render={this.renderPersonDetail} />
+          </Switch>
+        )}
       </div>
     );
   }
