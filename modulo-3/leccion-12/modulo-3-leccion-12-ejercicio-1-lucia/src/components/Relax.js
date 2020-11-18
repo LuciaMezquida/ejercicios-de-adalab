@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+
 const Relax = () => {
   return (
     <section className="relax">
@@ -11,5 +12,6 @@ const Relax = () => {
     </section>
   );
 };
+
 Relax.propTypes = {};
 export default Relax;

@@ -3,6 +3,8 @@
 }
 .list {
   list-style: none;
+  border: 1px solid black;
+  padding: 10px;
 }
 .link {
   text-decoration: none;
@@ -11,7 +13,7 @@
   font-size: 30px;
 }
 .counter {
-  margin: 20px;
+  margin: 30px;
   font-size: 30px;
 }
 .text {
@@ -22,7 +24,7 @@
   font-size: 20px;
 }
 .list-container {
-  margin-top: 10%;
+  margin-top: 8%;
   display: flex;
   justify-content: space-evenly;
 }

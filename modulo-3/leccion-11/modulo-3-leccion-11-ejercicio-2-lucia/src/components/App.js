@@ -57,7 +57,7 @@ class App extends React.Component {
   }
 
   renderPersonDetail(props) {
-    const routeCharacterId = props.match.params.userId;
+    const routeCharacterId = props.match.params.id;
     const person = this.state.personInfo.find((user) => user.login.uuid === routeCharacterId);
     if (person) {
       return (
@@ -80,7 +80,7 @@ class App extends React.Component {
             <FilterList handleFilter={this.handleFilter} personInfo={this.state.personInfo} />
             <CardsList personInfo={this.state.personInfo} />
           </Route>
-          <Route path="/user/:userId" render={this.renderPersonDetail} />
+          <Route path="/user/:id" render={this.renderPersonDetail} />
         </Switch>
       </div>
     );
