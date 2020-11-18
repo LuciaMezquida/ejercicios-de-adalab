@@ -7,12 +7,16 @@ import Relax from "./Relax";
 const Header = () => {
   return (
     <nav>
-      <ul>
-        <li>
-          <Link to="/counter">Counter</Link>
+      <ul className="list-container">
+        <li className="list">
+          <Link className="link" to="/counter">
+            Counter
+          </Link>
         </li>
-        <li>
-          <Link to="/relax">Relax</Link>
+        <li className="list">
+          <Link className="link" to="/relax">
+            Relax
+          </Link>
         </li>
       </ul>
     </nav>

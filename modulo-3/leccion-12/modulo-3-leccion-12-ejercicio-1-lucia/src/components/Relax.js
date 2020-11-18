@@ -6,7 +6,7 @@ const Relax = () => {
     <section className="relax">
       <p className="text">Te queda poco para dormir una semana entera</p>
       <Link to="/">
-        <button>Back</button>
+        <button className="btn btn-back">Back</button>
       </Link>
     </section>
   );

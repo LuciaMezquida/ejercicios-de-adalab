@@ -1,3 +1,28 @@
 .App {
   text-align: center;
 }
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.counter {
+  margin: 20px;
+  font-size: 30px;
+}
+.text {
+  font-size: 30px;
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 20px;
+}
+.list-container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-evenly;
+}
