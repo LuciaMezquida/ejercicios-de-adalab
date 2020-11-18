@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Counter extends React.Component {
   constructor(props) {
@@ -24,7 +25,14 @@ class Counter extends React.Component {
     });
   }
   render() {
-    return <div>Contador: {this.state.counter}</div>;
+    return (
+      <>
+        <div>Contador: {this.state.counter}</div>
+        <Link to="/">
+          <button>Back</button>
+        </Link>
+      </>
+    );
   }
 }
 
