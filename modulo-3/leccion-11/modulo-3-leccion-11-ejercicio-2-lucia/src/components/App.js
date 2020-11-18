@@ -62,7 +62,7 @@ class App extends React.Component {
     if (person) {
       return (
         <PersonDetail
-          image={person.picture.medium}
+          image={person.picture.large}
           name={person.name.first}
           lastName={person.name.last}
           city={person.location.city}
@@ -75,12 +75,12 @@ class App extends React.Component {
     return (
       <div className="App">
         <Switch>
-          <Route path="/user/:userId" render={this.renderPersonDetail} />
-          <Route path="/">
+          <Route exact path="/">
             <button onClick={this.newApiComponent}>Click</button>
             <FilterList handleFilter={this.handleFilter} personInfo={this.state.personInfo} />
             <CardsList personInfo={this.state.personInfo} />
           </Route>
+          <Route path="/user/:userId" render={this.renderPersonDetail} />
         </Switch>
       </div>
     );
