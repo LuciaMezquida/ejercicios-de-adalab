@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 class PersonDetail extends React.Component {
   render() {
     return (
-      <section className="detail">
-        <div>
+      <section className="container-detail">
+        <div className="detail">
           <div className="detail-image">
             <img src={this.props.image} alt={this.props.name + " " + this.props.lastName} />
           </div>

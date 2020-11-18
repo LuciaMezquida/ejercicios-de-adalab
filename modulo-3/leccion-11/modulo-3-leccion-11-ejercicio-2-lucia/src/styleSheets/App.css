@@ -20,10 +20,19 @@
 }
 .link {
   text-decoration: none;
+  color: black;
 }
 .detail {
   border: 4px solid black;
   width: 20vw;
   margin: auto;
   padding: 10px 0;
+}
+.container-detail {
+  margin-top: 20%;
+}
+
+.detail__button {
+  margin-top: 10px;
+  padding: 5px 10px;
 }
