@@ -12,11 +12,11 @@ class App extends React.Component {
     this.state = {
       personInfo: "",
     };
-    this.newApiComponent = this.newApiComponent.bind(this);
     this.handleFilter = this.handleFilter.bind(this);
     this.renderPersonDetail = this.renderPersonDetail.bind(this);
   }
-  newApiComponent() {
+
+  componentDidMount() {
     fetchPeople().then((data) => {
       this.setState({
         personInfo: data.results,
@@ -73,16 +73,15 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="App">
+      <section className="App">
         <Switch>
           <Route exact path="/">
-            <button onClick={this.newApiComponent}>Click</button>
             <FilterList handleFilter={this.handleFilter} personInfo={this.state.personInfo} />
             <CardsList personInfo={this.state.personInfo} />
           </Route>
           <Route path="/user/:id" render={this.renderPersonDetail} />
         </Switch>
-      </div>
+      </section>
     );
   }
 }
