@@ -1,0 +1,21 @@
+{
+  "name": "modulo-3-leccion-13-ejercicio-03-kata-padding-lucia",
+  "version": "1.0.0",
+  "description": "testing-exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ejercicios-de-adalab"
+  },
+  "keywords": [
+    "testing-jest"
+  ],
+  "author": "lucia-mezquida",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
