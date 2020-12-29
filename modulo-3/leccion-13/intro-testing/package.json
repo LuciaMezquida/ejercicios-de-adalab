@@ -1,0 +1,21 @@
+{
+  "name": "intro-testing",
+  "version": "1.0.0",
+  "description": "testing-exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ejercicios-de-adalab"
+  },
+  "keywords": [
+    "testing"
+  ],
+  "author": "lucia-mezquida",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
