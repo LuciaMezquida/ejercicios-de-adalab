@@ -1,17 +1,17 @@
 const fs = require("fs");
 
-let text = "Como como poco coco, poco coco compro";
+let text = "Lorem ipsum";
 const objectData = {
-  originalContent: "Lorem ipsum",
-  changedContent: "LOREM IPSUM",
-  textLenght: 11,
+  originalContent: text,
+  changedContent: text.toUpperCase(),
+  textLenght: text.length,
 };
 
 console.log(objectData);
 text = JSON.stringify(objectData);
 console.log(text);
 
-fs.writeFile("./output.txt", objectData, (error) => {
+fs.writeFile("./output.txt", text, (error) => {
   if (error) {
     console.log(error);
   } else {
