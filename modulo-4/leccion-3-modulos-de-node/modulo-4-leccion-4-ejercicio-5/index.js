@@ -17,4 +17,4 @@ const students = [
     promo: "l",
   },
 ];
-_.sortBy(students, [name, promo]);
+console.log(_.sortBy(students, ["promo", "name"]));
