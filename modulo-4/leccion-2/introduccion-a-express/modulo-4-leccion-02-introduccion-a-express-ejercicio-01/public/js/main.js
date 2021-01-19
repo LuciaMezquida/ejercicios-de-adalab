@@ -18,7 +18,7 @@ document
       userName: document.querySelector(".js-username").value,
     };
 
-    fetch("http://localhost:3000/new-user", {
+    fetch("http://localhost:3000/users/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
