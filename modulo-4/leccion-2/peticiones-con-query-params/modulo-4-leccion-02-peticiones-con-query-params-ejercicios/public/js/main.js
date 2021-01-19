@@ -7,9 +7,10 @@ document
   .addEventListener("click", () => {
     const inputName = document.querySelector(".js-input-name");
     const inputEmail = document.querySelector(".js-input-email");
+    const inputFilter = document.querySelector(".js-input-filter");
 
     // create query params
-    const queryParams = `?userName=${inputName.value}&userEmail=${inputEmail.value}`;
+    const queryParams = `?userName=${inputName.value}&userEmail=${inputEmail.value}&filterByName=${inputFilter.value}`;
 
     fetch("http://localhost:3000/user" + queryParams, { method: "POST" })
       .then((response) => response.json())
