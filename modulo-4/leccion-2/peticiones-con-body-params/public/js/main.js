@@ -18,6 +18,9 @@ document
     fetch("http://localhost:3000/user", {
       method: "POST",
       body: JSON.stringify(bodyParams),
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
       .then((response) => response.json())
       .then((responseData) => {

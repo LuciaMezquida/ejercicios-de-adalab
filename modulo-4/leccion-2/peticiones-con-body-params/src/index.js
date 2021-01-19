@@ -26,16 +26,16 @@ const users = []; // fake users data base
 // api endpoints
 
 server.post("/user", (req, res) => {
-  console.log("Query params:", req.query);
-  console.log("Query param userName:", req.query.userName);
-  console.log("Query param userEmail:", req.query.userEmail);
-  // filterByName = req.query.filterByName;
-  // filterByMail = req.query.filterByMail;
+  console.log("Body params:", req.body);
+  console.log("Body param userName:", req.body.userName);
+  console.log("Body param userEmail:", req.body.userEmail);
+  // filterByName = req.body.filterByName;
+  // filterByMail = req.body.filterByMail;
 
   // add new user to daba base
   users.push({
-    name: req.query.userName,
-    email: req.query.userEmail,
+    name: req.body.userName,
+    email: req.body.userEmail,
   });
 
   res.json({
