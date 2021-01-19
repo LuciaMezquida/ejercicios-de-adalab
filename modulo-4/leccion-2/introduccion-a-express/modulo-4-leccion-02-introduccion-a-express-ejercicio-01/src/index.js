@@ -11,7 +11,7 @@ server.use(cors());
 server.use(express.json());
 
 // init express aplication
-const serverPort = 3000;
+const serverPort = 3500;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -23,7 +23,7 @@ server.use(express.static(staticServerPath));
 // API: listen fetch requests
 
 // API request > GET > http://localhost:3000/users
-server.get("/users", (req, res) => {
+server.post("/users", (req, res) => {
   const response = {
     users: [{ name: "Sofía" }, { name: "María" }],
   };
