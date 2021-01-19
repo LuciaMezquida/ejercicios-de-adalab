@@ -1,0 +1,21 @@
+{
+  "name": "modulo-4-leccion-02-introduccion-a-express-ejercicio-01",
+  "version": "1.0.0",
+  "description": "exercises to practice express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ejercicios-de-adalab"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Lucia Mezquida",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
