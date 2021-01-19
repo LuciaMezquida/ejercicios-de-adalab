@@ -8,9 +8,10 @@ document
     const inputName = document.querySelector(".js-input-name");
     const inputEmail = document.querySelector(".js-input-email");
     const inputFilter = document.querySelector(".js-input-filter");
+    const inputFilterMail = document.querySelector(".js-input-filterMail");
 
     // create query params
-    const queryParams = `?userName=${inputName.value}&userEmail=${inputEmail.value}&filterByName=${inputFilter.value}`;
+    const queryParams = `?userName=${inputName.value}&userEmail=${inputEmail.value}&filterByName=${inputFilter.value}&filterByMail=${inputFilterMail.value}`;
 
     fetch("http://localhost:3000/user" + queryParams, { method: "POST" })
       .then((response) => response.json())
