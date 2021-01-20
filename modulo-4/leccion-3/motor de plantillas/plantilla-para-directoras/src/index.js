@@ -25,13 +25,16 @@ app.get("/es/film:filmId.html", (req, res) => {
   // get film data
   const filmData = films.find((film) => film.id === req.params.filmId);
   console.log("film data", filmData);
+  const filmYear = req.query;
+  console.log("film year", filmYear);
   //ensure data
   filmData.id = filmData.id || "";
   filmData.title = filmData.title || "";
   filmData.year = filmData.year || "";
   filmData.director = filmData.director || "";
   filmData.country = filmData.country || "";
-  filmData.awards = filmData.awards || [];
+  filmData.awards =
+    filmData.awards.filter((award) => award.year === "2004") || [];
 
   // response with rendered template called film
   if (filmData) {
