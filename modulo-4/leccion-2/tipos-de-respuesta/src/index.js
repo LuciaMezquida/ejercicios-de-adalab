@@ -34,7 +34,6 @@ app.get("/response-c", (req, res) => {
   }
 });
 
-//con query params....
 app.get("/response-d", (req, res) => {
   const user = req.query.user;
   if (user == 1 || user == 2) {
