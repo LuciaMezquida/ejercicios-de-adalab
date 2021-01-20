@@ -4,23 +4,23 @@ const data = require("./data.json");
 const users = data.results;
 
 // create server
-const server = express();
+const app = express();
 
 // set express middleware
-server.use(express.json());
-server.use(cors());
+app.use(express.json());
+app.use(cors());
 
 // init express aplication
 const serverPort = 3000;
-server.listen(serverPort, () => {
+app.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
 // static server
 const staticServerPath = "./public";
-server.use(express.static(staticServerPath));
+app.use(express.static(staticServerPath));
 
-server.get("/users/:userId", (req, res) => {
+app.get("/users/:userId", (req, res) => {
   console.log("Url params:", req.params);
   console.log("Url param userId:", req.params.userId);
   // find promo by userId
@@ -33,7 +33,7 @@ server.get("/users/:userId", (req, res) => {
     res.json(user);
   }
 });
-server.get("/users/:userId/episodes", (req, res) => {
+app.get("/users/:userId/episodes", (req, res) => {
   console.log("Url params:", req.params);
   console.log("Url param userId:", req.params.userId);
 
