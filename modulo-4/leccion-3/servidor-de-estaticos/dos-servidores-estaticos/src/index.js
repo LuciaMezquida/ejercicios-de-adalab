@@ -8,6 +8,8 @@ app.listen(serverPort, () => {
   console.log(`App listening at http://localhost:${serverPort}`);
 });
 
+const staticServerPath2 = "./admin";
+app.use(express.static(staticServerPath2));
 // config express static server
 const staticServerPath = "./public"; // relative to the root of the project
 app.use(express.static(staticServerPath));
