@@ -33,23 +33,22 @@ server.get("/users/:userId", (req, res) => {
     res.json(user);
   }
 });
-// server.get("/users/:userId/episodes", (req, res) => {
-//   console.log("Url params:", req.params);
-//   console.log("Url param userId:", req.params.userId);
+server.get("/users/:userId/episodes", (req, res) => {
+  console.log("Url params:", req.params);
+  console.log("Url param userId:", req.params.userId);
 
-//   // find promo by userId
-//   const user = users
-//     .filter((user) => user.id === req.params.userId)
-//   const episodes = user.episode
-//   console.log("Found user:", user);
-//   console.log("Found episodes:", episodes);
+  // find promo by userId
+  const user = users.filter((user) => user.id === parseInt(req.params.userId));
+  const episodes = user[0].episode;
+  console.log("Found user:", user);
+  console.log("Found episodes:", episodes);
 
-//   // response with selected user data or error
-//   if (user === undefined) {
-//     res.json({ error: "user-not-found" });
-//   } else if (episodes !== undefined) {
-//     res.json(episodes);
-//   } else {
-//     res.json(user);
-//   }
-// });
+  // response with selected user data or error
+  if (user === undefined) {
+    res.json({ error: "user-not-found" });
+  } else if (episodes !== undefined) {
+    res.json({ episodes });
+  } else {
+    res.json(user);
+  }
+});
