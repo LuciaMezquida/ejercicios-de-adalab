@@ -35,9 +35,8 @@ app.get("/response-c", (req, res) => {
 });
 
 //con query params....
-const user = "4";
-app.get("/response-d/user=" + user, (req, res) => {
-  console.log(user);
+app.get("/response-d", (req, res) => {
+  const user = req.query.user;
   if (user == 1 || user == 2) {
     res.status(200).json({ result: "ok" });
   } else {

@@ -22,7 +22,6 @@ app.listen(serverPort, () => {
 // endpoints
 
 app.get("/es/film:filmId.html", (req, res) => {
-  const filmYear = req.query.adwarsYear || "";
   // get film data
   const filmData = films.find((film) => film.id === req.params.filmId);
   //console.log("film data", filmData);
