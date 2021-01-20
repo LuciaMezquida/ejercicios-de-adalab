@@ -1,7 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const data = require("./data.json");
-const users = data.results;
 
 // create server
 const app = express();
@@ -10,45 +8,41 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// init express aplication
+// create app server
 const serverPort = 3000;
 app.listen(serverPort, () => {
-  console.log(`Server listening at http://localhost:${serverPort}`);
+  console.log(`App listening at http://localhost:${serverPort}`);
 });
 
-// static server
-const staticServerPath = "./public";
-app.use(express.static(staticServerPath));
+// endpoints, more info about express response: https://expressjs.com/es/api.html#res
 
-app.get("/users/:userId", (req, res) => {
-  console.log("Url params:", req.params);
-  console.log("Url param userId:", req.params.userId);
-  // find promo by userId
-  const user = users.find((user) => user.id === parseInt(req.params.userId));
-  console.log("user: " + user);
-  // response with selected user data or error
-  if (user === undefined) {
-    res.json({ error: "user-not-found" });
+app.get("/response-a", (req, res) => {
+  res.json({ result: "ok" });
+});
+
+app.get("/response-b", (req, res) => {
+  const htmlCode = `<h1>Esto es una página de prueba :P</h1>`;
+  res.send(htmlCode);
+});
+
+app.get("/response-c", (req, res) => {
+  const randomNumber = Math.round(Math.random() * 10);
+  if (randomNumber % 2 === 0) {
+    res.redirect("https://www.youtube.com/");
   } else {
-    res.json(user);
+    res.redirect("https://www.instagram.com/");
   }
 });
-app.get("/users/:userId/episodes", (req, res) => {
-  console.log("Url params:", req.params);
-  console.log("Url param userId:", req.params.userId);
 
-  // find promo by userId
-  const user = users.filter((user) => user.id === parseInt(req.params.userId));
-  const episodes = user[0].episode;
-  console.log("Found user:", user);
-  console.log("Found episodes:", episodes);
-
-  // response with selected user data or error
-  if (user === undefined) {
-    res.json({ error: "user-not-found" });
-  } else if (episodes !== undefined) {
-    res.json({ episodes });
+//con query params....
+const user = "4";
+app.get("/response-d/user=" + user, (req, res) => {
+  console.log(user);
+  if (user == 1 || user == 2) {
+    res.status(200).json({ result: "ok" });
   } else {
-    res.json(user);
+    res.status(404).json({
+      result: "error: invalid query param",
+    });
   }
 });
