@@ -24,24 +24,27 @@ app.listen(serverPort, () => {
 app.get("/es/film:filmId.html", (req, res) => {
   // get film data
   const filmData = films.find((film) => film.id === req.params.filmId);
-  //console.log("film data", filmData);
+  console.log("film data", filmData);
   const filmYear = req.query.adwarsYear || "";
   console.log("film year:", filmYear);
   //ensure data
-  filmData.id = filmData.id || "";
-  filmData.title = filmData.title || "";
-  filmData.year = filmData.year || "";
-  filmData.director = filmData.director || "";
-  filmData.country = filmData.country || "";
 
-  if (filmYear) {
-    filmData.awards =
-      filmData.awards.filter((award) => award.year === filmYear) || [];
-  } else {
-    filmData.awards = filmData.awards || [];
-  }
   // response with rendered template called film
   if (filmData) {
+    filmData.id = filmData.id || "";
+    filmData.title = filmData.title || "";
+    filmData.year = filmData.year || "";
+    filmData.director = filmData.director || "";
+    filmData.country = filmData.country || "";
+    filmData.filteredAwards = [];
+
+    if (filmYear) {
+      filmData.filteredAwards =
+        filmData.awards.filter((award) => award.year === filmYear) || [];
+      console.log(filmData.awards);
+    } else {
+      filmData.filteredAwards = filmData.awards || [];
+    }
     res.render("pages/film", filmData);
   } else {
     res.render("pages/film-not-found");

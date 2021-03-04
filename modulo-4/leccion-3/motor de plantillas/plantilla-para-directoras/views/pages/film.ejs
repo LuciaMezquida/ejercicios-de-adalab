@@ -22,7 +22,7 @@
       <li>Directora: <%= director %></li>
       <% if(country !== "") { %>
       <li>Pais: <%= country %></li>
-      <% } %> <% awards.forEach(function(award) { %>
+      <% } %> <% filteredAwards.forEach(function(award) { %>
       <li class="ml-1"><%= award.year %>: <%= award.info %>.</li>
       <% }) %>
     </ul>
